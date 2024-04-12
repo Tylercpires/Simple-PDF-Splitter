@@ -22,11 +22,11 @@ def main():
         pdfPage.add_page(pdfInstance.pages[page])
         
         if(page + 1 < 10):
-            with open(f"{fileName[0:-4]}_Page0{page + 1}.pdf", "wb") as pdfPages_stream:
-                pdfPage.write(pdfPages_stream)
+            with open(f"{fileName[0:-4]}_Page0{page + 1}.pdf", "wb") as outputPdfPage:
+                pdfPage.write(outputPdfPage)
         else:
-            with open(f"{fileName[0:-4]}_Page{page + 1}.pdf", "wb") as pdfPages_stream:
-                pdfPage.write(pdfPages_stream)
+            with open(f"{fileName[0:-4]}_Page{page + 1}.pdf", "wb") as outputPdfPage:
+                pdfPage.write(outputPdfPage)
             
     print("PDF successfully split!")
 
